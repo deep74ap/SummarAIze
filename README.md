@@ -50,19 +50,21 @@ SummarAIze/
 
 
 
-## 🏗️ Architecture Overview
+## 🧠 Architecture Overview
 
 ```mermaid
 graph TD
-    A[User Uploads Document] --> B[Text Extraction (PyMuPDF)]
-    B --> C[Chunking (LangChain Splitters)]
-    C --> D[Embeddings + Indexing (FAISS)]
-    D --> E[User Questions or Challenge Me Request]
-    E --> F[Prompting via LangChain]
-    F --> G[Response Generation via Groq API]
-    G --> H[Answer with Justification & Highlighted Snippet]
+    A[User Uploads Document] --> B[Text Extraction using PyMuPDF]
+    B --> C[Chunking via LangChain]
+    C --> D[Embedding and Indexing in FAISS]
+    D --> E[User Question or Challenge Request]
+    E --> F[Prompt Generation via LangChain]
+    F --> G[LLM Response via Groq API]
+    G --> H[Answer with Justification and Snippet]
 ```
 
+
+---
 
 
 ## 🛠️ Setup Instructions
