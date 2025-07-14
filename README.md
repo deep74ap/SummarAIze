@@ -145,7 +145,7 @@ streamlit run frontend/streamlit_app.py
 | ✔️ Bonus Features                 | Memory + snippet highlighting support                   |
 | ✔️ Contextual Awareness           | Uses FAISS and LangChain to maintain document context   |
 
-## Screenshots
+## 📸 Screenshots
   **Landing Page**
   
   <img width="955" height="449" alt="Screenshot 1" src="https://github.com/user-attachments/assets/80214150-30d3-4f47-bf2c-220b7d5b202d" />
@@ -176,8 +176,12 @@ streamlit run frontend/streamlit_app.py
 <img width="953" height="452" alt="SelfEvalQUizans" src="https://github.com/user-attachments/assets/8aea9bc2-69f5-4c99-8696-c0426c0e3b32" />
 
 
-**Deepak Chaurasiya**  
+**👨‍💻 Deepak Chaurasiya**  
+
  Email: [deepak09012004@gmail.com](mailto:deepak09012004@gmail.com)  
+ 
 GitHub: [deep74ap](https://github.com/deep74ap)
+
 © 2025 — Smart Assistant Project
+
 SummarAIze smarter. Learn deeper. 🚀
