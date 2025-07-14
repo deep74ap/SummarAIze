@@ -47,6 +47,9 @@ SummarAIze/
 
 ---
 
+
+
+
 ## 🏗️ Architecture Overview
 
 ```mermaid
@@ -60,7 +63,7 @@ graph TD
     G --> H[Answer with Justification & Highlighted Snippet]
 ```
 
----
+
 
 ## 🛠️ Setup Instructions
 
@@ -142,18 +145,32 @@ streamlit run frontend/streamlit_app.py
 
 ## Screenshots
   **Landing Page**
+  
   <img width="955" height="449" alt="Screenshot 1" src="https://github.com/user-attachments/assets/80214150-30d3-4f47-bf2c-220b7d5b202d" />
+  
   **Document Summary Thinking**
+  
 <img width="959" height="444" alt="DocumentSummaryThinking" src="https://github.com/user-attachments/assets/ed58be73-c93b-4384-b1a0-41af7654f5a8" />
+
   **Summary**
+  
 <img width="914" height="444" alt="summaryofPDF" src="https://github.com/user-attachments/assets/1bcfcda7-f656-424c-bb73-175c9e14d338" />
+  
   **Ask Question**
+  
   <img width="959" height="455" alt="AskQuestion" src="https://github.com/user-attachments/assets/3f61e29e-dc9c-4de7-b8d9-727c1bb83ff8" />
+  
   **Self Evaluation Quiz**
+  
   <img width="959" height="452" alt="SelfEvalQues" src="https://github.com/user-attachments/assets/93292ddb-6a4a-4467-8983-5c89440ae4db" />
+
+  
   **Evaluation of Quiz Reasoning**
+
   <img width="746" height="452" alt="EvaluationOFQuizwithReasoning" src="https://github.com/user-attachments/assets/12e202df-642e-4639-86e9-9cb70270b197" />
+  
   **Self Evaluation Score**
+
 <img width="953" height="452" alt="SelfEvalQUizans" src="https://github.com/user-attachments/assets/8aea9bc2-69f5-4c99-8696-c0426c0e3b32" />
 
 
