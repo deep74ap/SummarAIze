@@ -20,15 +20,17 @@
 ---
 ## 📁 Project Structure
 
+```text
 SummarAIze/
 ├── backend/
-│ ├── vector_database.py # PDF loading, chunking, and FAISS logic
-│ └── rag_pipeline.py # Summarization and RAG-based Q&A pipeline
+│   ├── main.py
+│   ├── vector_database.py
+│   └── rag_pipeline.py
 ├── frontend/
-│ ├── streamlit_app.py # Main Streamlit UI
-│ ├── summary.py # Summary view
-│ ├── ask_questions.py # Ask Anything Q&A page
-│ └── self_eval.py # Challenge Me mode page
+│   ├── streamlit_app.py
+│   ├── summary.py
+│   ├── ask_questions.py
+│   └── self_eval.py
 ├── requirements.txt
 └── .env
 
@@ -139,6 +141,8 @@ streamlit run frontend/streamlit_app.py
 | ✔️ Contextual Awareness           | Uses FAISS and LangChain to maintain document context   |
 
 ---
-
-
+**Deepak Chaurasiya**  
+ Email: [deepak09012004@gmail.com](mailto:deepak09012004@gmail.com)  
+GitHub: [deep74ap](https://github.com/deep74ap)
+© 2025 — Smart Assistant Project
 SummarAIze smarter. Learn deeper. 🚀
