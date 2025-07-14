@@ -23,7 +23,6 @@
 ```text
 SummarAIze/
 ├── backend/
-│   ├── main.py
 │   ├── vector_database.py
 │   └── rag_pipeline.py
 ├── frontend/
@@ -39,7 +38,6 @@ SummarAIze/
 | Technology       | Role                                             |
 |------------------|--------------------------------------------------|
 | **Streamlit**    | Web-based frontend UI                            |
-| **FastAPI**      | Lightweight backend API server                   |
 | **LangChain**    | Orchestration of retrieval and LLM prompting     |
 | **Groq API**     | High-speed inference using Mixtral or LLaMA      |
 | **PyMuPDF**      | PDF parsing and text extraction                  |
@@ -100,8 +98,6 @@ GROQ_API_KEY=your_groq_api_key
 ### 5. Run the Application
 
 ```bash
-# Start FastAPI backend
-uvicorn backend.main:app --reload
 
 # Start Streamlit frontend (in separate terminal)
 streamlit run frontend/streamlit_app.py
@@ -109,9 +105,9 @@ streamlit run frontend/streamlit_app.py
 
 ---
 
-## 📽 Demo
+## 📽 Demo Video
 
-> 🎥 Coming soon: A short YouTube walkthrough of SummarAIze in action.
+👉 [Watch the full demo on YouTube](https://www.youtube.com/watch?v=73hCgYMFIDY)
 
 ---
 
