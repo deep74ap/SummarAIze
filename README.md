@@ -20,24 +20,24 @@
 ---
 ## 📁 Project Structure
 
+```text
 SummarAIze/
 ├── backend/
-│ ├── vector_database.py # PDF loading, chunking, and FAISS logic
-│ └── rag_pipeline.py # Summarization and RAG-based Q&A pipeline
+│   ├── vector_database.py
+│   └── rag_pipeline.py
 ├── frontend/
-│ ├── streamlit_app.py # Main Streamlit UI
-│ ├── summary.py # Summary view
-│ ├── ask_questions.py # Ask Anything Q&A page
-│ └── self_eval.py # Challenge Me mode page
+│   ├── streamlit_app.py
+│   ├── summary.py
+│   ├── ask_questions.py
+│   └── self_eval.py
 ├── requirements.txt
 └── .env
-
+```
 ## 🧰 Tech Stack
 
 | Technology       | Role                                             |
 |------------------|--------------------------------------------------|
 | **Streamlit**    | Web-based frontend UI                            |
-| **FastAPI**      | Lightweight backend API server                   |
 | **LangChain**    | Orchestration of retrieval and LLM prompting     |
 | **Groq API**     | High-speed inference using Mixtral or LLaMA      |
 | **PyMuPDF**      | PDF parsing and text extraction                  |
@@ -45,20 +45,25 @@ SummarAIze/
 
 ---
 
-## 🏗️ Architecture Overview
+
+
+
+## 🧠 Architecture Overview
 
 ```mermaid
 graph TD
-    A[User Uploads Document] --> B[Text Extraction (PyMuPDF)]
-    B --> C[Chunking (LangChain Splitters)]
-    C --> D[Embeddings + Indexing (FAISS)]
-    D --> E[User Questions or Challenge Me Request]
-    E --> F[Prompting via LangChain]
-    F --> G[Response Generation via Groq API]
-    G --> H[Answer with Justification & Highlighted Snippet]
+    A[User Uploads Document] --> B[Text Extraction using PyMuPDF]
+    B --> C[Chunking via LangChain]
+    C --> D[Embedding and Indexing in FAISS]
+    D --> E[User Question or Challenge Request]
+    E --> F[Prompt Generation via LangChain]
+    F --> G[LLM Response via Groq API]
+    G --> H[Answer with Justification and Snippet]
 ```
 
+
 ---
+
 
 ## 🛠️ Setup Instructions
 
@@ -93,8 +98,6 @@ GROQ_API_KEY=your_groq_api_key
 ### 5. Run the Application
 
 ```bash
-# Start FastAPI backend
-uvicorn backend.main:app --reload
 
 # Start Streamlit frontend (in separate terminal)
 streamlit run frontend/streamlit_app.py
@@ -102,9 +105,9 @@ streamlit run frontend/streamlit_app.py
 
 ---
 
-## 📽 Demo
+## 📽 Demo Video
 
-> 🎥 Coming soon: A short YouTube walkthrough of SummarAIze in action.
+👉 [Watch the full demo on YouTube](https://www.youtube.com/watch?v=73hCgYMFIDY)
 
 ---
 
@@ -138,7 +141,43 @@ streamlit run frontend/streamlit_app.py
 | ✔️ Bonus Features                 | Memory + snippet highlighting support                   |
 | ✔️ Contextual Awareness           | Uses FAISS and LangChain to maintain document context   |
 
----
+## 📸 Screenshots
+  **Landing Page**
+  
+  <img width="955" height="449" alt="Screenshot 1" src="https://github.com/user-attachments/assets/80214150-30d3-4f47-bf2c-220b7d5b202d" />
+  
+  **Document Summary Thinking**
+  
+<img width="959" height="444" alt="DocumentSummaryThinking" src="https://github.com/user-attachments/assets/ed58be73-c93b-4384-b1a0-41af7654f5a8" />
 
+  **Summary**
+  
+<img width="914" height="444" alt="summaryofPDF" src="https://github.com/user-attachments/assets/1bcfcda7-f656-424c-bb73-175c9e14d338" />
+  
+  **Ask Question**
+  
+  <img width="959" height="455" alt="AskQuestion" src="https://github.com/user-attachments/assets/3f61e29e-dc9c-4de7-b8d9-727c1bb83ff8" />
+  
+  **Self Evaluation Quiz**
+  
+  <img width="959" height="452" alt="SelfEvalQues" src="https://github.com/user-attachments/assets/93292ddb-6a4a-4467-8983-5c89440ae4db" />
+
+  
+  **Evaluation of Quiz Reasoning**
+
+  <img width="746" height="452" alt="EvaluationOFQuizwithReasoning" src="https://github.com/user-attachments/assets/12e202df-642e-4639-86e9-9cb70270b197" />
+  
+  **Self Evaluation Score**
+
+<img width="953" height="452" alt="SelfEvalQUizans" src="https://github.com/user-attachments/assets/8aea9bc2-69f5-4c99-8696-c0426c0e3b32" />
+
+
+**👨‍💻 Deepak Chaurasiya**  
+
+ Email: [deepak09012004@gmail.com](mailto:deepak09012004@gmail.com)  
+ 
+GitHub: [deep74ap](https://github.com/deep74ap)
+
+© 2025 — Smart Assistant Project
 
 SummarAIze smarter. Learn deeper. 🚀
