@@ -34,20 +34,20 @@ Summary:
 
 
 def generate_questions(documents, model):
-    context = get_context(documents)
-    prompt = ChatPromptTemplate.from_template(f"""
-    You are a quiz creator. Based on the following context, generate 3 clear, short, and relevant quiz questions.
-    
-    Format them as:
-    Q1: ...
-    Q2: ...
-    Q3: ...
+    context = get_context(documents,max_chars=8000)  
+    prompt = ChatPromptTemplate.from_template("""
+You are a quiz creator. Based on the following context, generate 3 clear, short, and relevant quiz questions.
 
-    Only output the questions. Do not explain or think aloud.
+Format them as:
+Q1: ...
+Q2: ...
+Q3: ...
 
-    Context:
-    {context}
-    """)
+Only output the questions. Do not explain or think aloud.
+
+Context:
+{context}
+""")
     chain = prompt | model
     response = chain.invoke({"context": context}).content.strip()
     return [q.strip() for q in response.splitlines() if q.strip().startswith("Q")]
@@ -97,15 +97,16 @@ def load_faiss_db(db_path=FAISS_DB_PATH):
 def retrieve_docs(faiss_db, query):
     return faiss_db.similarity_search(query)
 
-def get_context(documents):
+MAX_CONTEXT_CHARS = 12000 
+def get_context(documents,max_chars=MAX_CONTEXT_CHARS):
     context = "\n\n".join([doc.page_content for doc in documents])
-    return context
+    return context[:max_chars]
 
 custom_prompt_template = custom_prompt_template = """
 You're an assistant helping answer questions based only on the provided context.
 
 Always follow this format:
-1.  **Thinking (max 50 words)**: <your short reasoning do not think in more than 50 words>
+1.  **Thinking**: <your short reasoning do not think in more than 50 words,Important length does not exceeds 50 words.>
 2.  **Answer**: <your final answer>
 3.  **Justification**: Quote or summarize which part of the context helped, including paragraph and page number if mentioned.
 
@@ -118,7 +119,7 @@ Response:
 
 
 def answer_query(documents, model, query):
-    context = get_context(documents)
+    context = get_context(documents,max_chars=10000)
     prompt = ChatPromptTemplate.from_template(custom_prompt_template)
     chain = prompt | model
     response = chain.invoke({"question": query, "context": context})
